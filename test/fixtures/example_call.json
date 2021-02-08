@@ -1,0 +1,27 @@
+[
+  {
+    "request": {
+      "body": "request body",
+      "headers": {"Content-Type": "application/json"},
+      "method": "get",
+      "options": [],
+      "params": {},
+      "url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2s"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"args\":{\"foo1\":\"bar1\",\"foo2\":\"bar2s\"},\"headers\":{\"x-forwarded-proto\":\"https\",\"x-forwarded-port\":\"443\",\"host\":\"postman-echo.com\",\"x-amzn-trace-id\":\"Root=1-601f0f7b-311c5c1e5de086fb78135d06\",\"user-agent\":\"hackney/1.17.0\"},\"url\":\"https://postman-echo.com/get?foo1=bar1&foo2=bar2s\"}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "279",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Sat, 06 Feb 2021 21:51:55 GMT",
+        "ETag": "W/\"117-8G5knXpfpOwGI8byyi9LjDvERKo\"",
+        "Vary": "Accept-Encoding",
+        "set-cookie": "sails.sid=s%3AOovYmeRH7T8nsJLvo3NqzqjFuPP_FciQ.BJL9UGS7QpnfodayyZ1Vb1RFHUFV7dkzOdRRVMBL56A; Path=/; HttpOnly"
+      },
+      "status_code": 200,
+      "type": 200
+    }
+  }
+]

@@ -1,18 +1,18 @@
 defmodule VcrMox do
-  @moduledoc """
-  Documentation for `VcrMox`.
-  """
+  defmacro __using__(_opts) do
+  end
 
-  @doc """
-  Hello world.
+  defmacro use_cassette(title, opts, do: block) do
+    quote do
+      adaptor = Module.concat([VcrMox.Adaptor, unquote(opts)[:for]])
 
-  ## Examples
+      if VcrMox.Fixture.fixture_exists?(unquote(title)) do
+        adaptor.mock(unquote(title), unquote(opts))
+      else
+        adaptor.mock_with_real_call(unquote(title), unquote(opts))
+      end
 
-      iex> VcrMox.hello()
-      :world
-
-  """
-  def hello do
-    :world
+      unquote(block)
+    end
   end
 end
